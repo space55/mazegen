@@ -14,6 +14,8 @@ public class Maze
 	protected boolean[][] maze;
 	private static Maze o_maze;
 
+	private static final boolean USE_GUI = true;
+
 	public static void main(String[] args)
 	{
 		o_maze = new Maze();
@@ -32,7 +34,14 @@ public class Maze
 		mg = new MazeGenerator();
 
 		maze = mg.generateMaze(x, y);
-		MazeGui.init(maze);
+		if (USE_GUI)
+		{
+			MazeGui.init(maze);
+		}
+		else
+		{
+			new MazeWriter(maze);
+		}
 		// printMaze(maze);
 	}
 

@@ -34,7 +34,7 @@ public class MazeGui extends JPanel
 		leny = c_maze[0].length;
 		gui = new MazeGui(c_maze);
 		frame = new JFrame();
-		frame.setSize(lenx * 20, leny * 20);
+		frame.setSize(lenx * 18, leny * 19);
 		frame.add(gui);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
